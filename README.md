@@ -50,7 +50,7 @@ To get a local copy up and running, follow these simple steps.
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/kalyan-kim/employee_salary_prediction.git
+    git clone https://github.com/EjjadaDinesh/-Employee-salary-prediction.git
     cd employee_salary_prediction
     ```
 
@@ -99,5 +99,5 @@ The predictive power of this application comes from a carefully constructed mach
 
 ## 🤝 Contact
 
-Created with passion by Ayush Anand. Let's connect!
-- **LinkedIn:** [kalyan barri](https://www.linkedin.com/in/kalyan-barri/)
+Created with passion by Ejjada Dinesh. Let's connect!
+- **LinkedIn:** [kalyan barri](https://www.linkedin.com/in/dinesh-ejjada-083a4a242)
