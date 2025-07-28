@@ -100,4 +100,4 @@ The predictive power of this application comes from a carefully constructed mach
 ## 🤝 Contact
 
 Created with passion by Ejjada Dinesh. Let's connect!
-- **LinkedIn:** [kalyan barri](https://www.linkedin.com/in/dinesh-ejjada-083a4a242)
+- **LinkedIn:** [Dinesh Ejjada](https://www.linkedin.com/in/dinesh-ejjada-083a4a242)
