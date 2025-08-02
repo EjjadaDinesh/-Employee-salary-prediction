@@ -63,7 +63,7 @@ st.markdown("""
     .footer {
         text-align: center;
         padding: 2rem;
-        color: #cbd5e1;
+        color: #60a5fa;
     }
     .footer a {
         color: #3b82f6;
@@ -191,6 +191,7 @@ st.markdown("""
     <a href="https://www.linkedin.com/in/dinesh-ejjada-083a4a242" target="_blank">LinkedIn</a>
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
