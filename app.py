@@ -101,7 +101,7 @@ if 'prediction_made' not in st.session_state:
 st.markdown("""
 <div style="text-align: center; padding: 2rem 1rem;">
     <h1 style="font-size: 4rem; font-family: 'Segoe UI', sans-serif; color: #ffffff;">
-        💼 <i>"Know Your Worth"</i> 💰
+        💼 <i>"Smart Salary Predictor"</i> 💰
     </h1>
     <h2 style="color: #cbd5e1; font-size: 1.6rem;">
         ✨ Discover your AI-predicted salary in seconds using ML magic! 🧠⚙️
@@ -126,7 +126,7 @@ with col1:
             gender = st.selectbox("Gender", options=label_encoders["Gender"].classes_)
 
         job_title = st.selectbox("Job Title", options=label_encoders["Job Title"].classes_, index=5)
-        submit_button = st.form_submit_button("✨ Divine the Salary")
+        submit_button = st.form_submit_button("💵💰predict salary")
         st.markdown('</div>', unsafe_allow_html=True)
 
 # --- OUTPUT DISPLAY ---
@@ -191,3 +191,4 @@ st.markdown("""
     <a href="https://www.linkedin.com/in/dinesh-ejjada-083a4a242" target="_blank">LinkedIn</a>
 </div>
 """, unsafe_allow_html=True)
+
