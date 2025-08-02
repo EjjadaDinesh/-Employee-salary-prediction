@@ -146,7 +146,7 @@ with col2:
             label="Estimated Annual Salary Range (INR)",
             value=f"₹{salary_inr * 0.925:,.0f} - ₹{salary_inr * 1.075:,.0f}",
             delta="Based on your inputs",
-            delta_color="white"
+            delta_color="off"
         )
         st.success("The vision is clear! Prediction successful.", icon="✅")
         st.markdown('</div>', unsafe_allow_html=True)
@@ -191,5 +191,6 @@ st.markdown("""
     <a href="https://www.linkedin.com/in/dinesh-ejjada-083a4a242" target="_blank">LinkedIn</a>
 </div>
 """, unsafe_allow_html=True)
+
 
 
