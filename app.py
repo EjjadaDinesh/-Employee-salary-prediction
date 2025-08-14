@@ -5,7 +5,6 @@ import streamlit as st
 import pandas as pd
 import joblib
 from PIL import Image
-
 # ======================================================================================
 # 2. PAGE CONFIGURATION
 # ======================================================================================
@@ -14,9 +13,7 @@ st.set_page_config(
     page_icon="💼",
     layout="wide",
     initial_sidebar_state="collapsed"
-)
-
-# ======================================================================================
+)# ======================================================================================
 # 3. CUSTOM CSS
 # ======================================================================================
 st.markdown("""
@@ -73,7 +70,6 @@ st.markdown("""
     }
 </style>
 """, unsafe_allow_html=True)
-
 # ======================================================================================
 # 4. LOAD RESOURCES
 # ======================================================================================
@@ -82,19 +78,16 @@ def load_all_assets():
     model_data = joblib.load("salary_predictor.pkl")
     eval_plot = Image.open("images/plot.png")
     return model_data, eval_plot
-
 model_data, eval_plot = load_all_assets()
 model = model_data["model"]
 label_encoders = model_data["label_encoders"]
 scaler = model_data["scaler"]
-
 # ======================================================================================
 # 5. SESSION STATE
 # ======================================================================================
 if 'prediction_made' not in st.session_state:
     st.session_state.prediction_made = False
     st.session_state.predicted_salary = 0.0
-
 # ======================================================================================
 # 6. UI LAYOUT - TITLE
 # ======================================================================================
@@ -108,9 +101,7 @@ st.markdown("""
     </h2>
 </div>
 """, unsafe_allow_html=True)
-
 col1, col2 = st.columns([1.2, 1], gap="large")
-
 # --- INPUT FORM ---
 with col1:
     with st.form("salary_form"):
@@ -136,12 +127,11 @@ with col2:
     else:
         st.markdown('<div class="form-container">', unsafe_allow_html=True)
         st.markdown("<h3 style='text-align: center; color: #c7d2fe;'>🔮 Oracle's Vision</h3>", unsafe_allow_html=True)
-
+        
         # Convert USD to INR (₹)
         exchange_rate = 83
         salary_usd = st.session_state.predicted_salary
         salary_inr = salary_usd * exchange_rate
-
         st.metric(
             label="Estimated Annual Salary Range (INR)",
             value=f"₹{salary_inr * 0.925:,.0f} - ₹{salary_inr * 1.075:,.0f}",
@@ -150,7 +140,6 @@ with col2:
         )
         st.success("The vision is clear! Prediction successful.", icon="✅")
         st.markdown('</div>', unsafe_allow_html=True)
-
 # ======================================================================================
 # 7. PREDICTION LOGIC
 # ======================================================================================
@@ -166,7 +155,6 @@ if submit_button:
 
     for col in ["Gender", "Education Level", "Job Title"]:
         input_df[col] = label_encoders[col].transform(input_df[col])
-
     input_scaled = scaler.transform(input_df)
     predicted_salary = model.predict(input_scaled)[0]
 
@@ -174,7 +162,6 @@ if submit_button:
     st.session_state.prediction_made = True
     st.balloons()
     st.rerun()
-
 # ======================================================================================
 # 8. FOOTER + EVALUATION
 # ======================================================================================
@@ -182,7 +169,6 @@ st.markdown("---")
 with st.expander(" 📈 Peek behind the curtain at the model's performance..."):
     st.image(eval_plot, caption="Model Evaluation: Actual vs. Predicted Salaries", use_container_width=True)
     st.info("This plot shows the relationship between the model's predicted salaries and the actual salaries from the test dataset. A strong positive correlation indicates high accuracy.")
-
 st.markdown("---")
 st.markdown("""
 <div class="footer">
@@ -191,6 +177,7 @@ st.markdown("""
     <a href="https://www.linkedin.com/in/dinesh-ejjada-083a4a242" target="_blank">LinkedIn</a>
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
