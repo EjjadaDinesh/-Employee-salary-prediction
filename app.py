@@ -129,7 +129,7 @@ with col2:
         st.markdown("<h3 style='text-align: center; color: #c7d2fe;'>🔮 Oracle's Vision</h3>", unsafe_allow_html=True)
         
         # Convert USD to INR (₹)
-        exchange_rate = 83
+        exchange_rate = 95.41
         salary_usd = st.session_state.predicted_salary
         salary_inr = salary_usd * exchange_rate
         st.metric(
@@ -172,9 +172,9 @@ with st.expander(" 📈 Peek behind the curtain at the model's performance..."):
 st.markdown("---")
 st.markdown("""
 <div class="footer">
-    <p>Crafted with 🧠 & ❤️ by <b>Dinesh Ejjada</b></p>
-    <a href="https://github.com/EjjadaDinesh" target="_blank">GitHub</a> | 
-    <a href="https://www.linkedin.com/in/dinesh-ejjada-083a4a242" target="_blank">LinkedIn</a>
+    <p>Crafted with 🧠 & ❤️ by <b>Ejjada Dinesh</b></p>
+    <a href="https://github.com/Ejjada Dinesh" target="_blank">GitHub</a> | 
+    <a href="https://www.linkedin.com/in/ejjada-dinesh-7569de/" target="_blank">LinkedIn</a>
 </div>
 """, unsafe_allow_html=True)
 
